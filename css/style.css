@@ -1,0 +1,123 @@
+body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	width: 100vw;
+	background-color: #15171D;
+	overflow-x: hidden;
+	padding: 0 14px 30px;
+}
+header{
+	max-width: 100vw;
+	margin-bottom: 10px;
+}
+.header__banner{
+	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
+}
+main{
+	max-width: 1262px;
+	padding: 0;
+	margin: 0 auto;
+}
+.games__grid{
+	display: grid;
+  	grid-gap: 12px;
+  	grid-template-columns: repeat(auto-fill, 170px);
+  	grid-template-rows: repeat(auto-fill, 106px);
+}
+.grid__game{
+	min-height: 106px;
+	grid-column: span 1;
+	grid-row: span 1;
+	position: relative;
+	border-radius: 10px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-clip: border-box;
+}
+.grid__game.first{
+	min-height: 224px;
+	grid-column: span 2;
+	grid-row: span 2;
+}
+.game__bord{
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	bottom: -1px;
+	width: -webkit-fill-available;
+	height: 27px;
+	background-color: #1d2129;
+	border-radius: 0 0 10px 10px;
+}
+.grid__game.first>.game__bord{
+	height: 29px;
+}
+.game__name{
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	line-height: 16px;
+	color: #E6F1FF;
+	letter-spacing: 0;
+	margin-top: 7px;
+	margin-left: 10px;
+	max-width: 120px;
+	max-height: 15px; 
+	overflow: hidden;
+}
+.game__star{
+	width: 15px;
+	height: 15px;
+	margin-top: 7px;
+	margin-left: 10px;
+}
+.star__inner{
+	fill: transparent;
+}
+.star__outline{
+	stroke:#00EBFF;
+}
+.game__buttons{
+	flex: 100%;
+	height: fit-content;
+	display: flex;
+	position: absolute;
+	bottom: -1px;
+	width: -webkit-fill-available;
+}
+.buttons__demo, .buttons__play{
+	flex:50%;
+	color: #E6F1FF;
+	font-size: 12px;
+	line-height: 16px;
+	letter-spacing: 0;
+	padding-top: 8px;
+	padding-bottom: 10px;
+	text-align: center;
+	text-decoration: unset;
+}
+.buttons__demo{
+	border-radius: 0 0 0 10px;
+	background-color:  #232833;
+	opacity: 1;
+}
+.buttons__play{
+	border-radius: 0 0 10px 0;
+	background-color: #0074FA;
+	opacity: 1;
+}
+.hidden{
+	display: none;
+}
+.game__bord.has-flag, .grid__game.first>.game__bord.has-flag{
+	height: -webkit-fill-available;
+	bottom: unset;
+	top: 0;
+	flex-wrap: wrap;
+	background-color: rgba(29,33,41, 0.9);
+}
+
